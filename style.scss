@@ -33,6 +33,7 @@ $bgC: #f8f9fa;
 	}
 }
 
+// 導覽列
 nav {
 	height: 100px;
 	display: grid;
@@ -44,14 +45,14 @@ nav {
 	// 最大寬度
 	max-width: 1200px;
 	margin: 0 auto;
-	// z-index: 1;
+	// background-color: rgba(255, 255, 255, 0.5);
 
 	ul {
 		list-style: none;
 		li {
 			display: inline-block;
 			a {
-				color: #fff;
+				color: gold;
 				text-decoration: none;
 				padding: 15px;
 			}
@@ -71,46 +72,42 @@ nav {
 	max-width: 1000px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin: 0 auto;
+	margin: 50px auto;
 	align-items: center;
 	color: $myC;
 	.pic {
 		// background: gold;
 		grid-area: pic;
-		margin: 80px 15px 30px 0;
-		padding-left: 100px;
 		img {
-			width: 70%;
+			width: 300px;
 		}
 	}
 
 	.tex {
 		// background: gray;
-		grid-area: tex;
-		padding-left: 100px;
-	}
+        grid-area: tex;
+        margin: 10px 0 20px;
+        h1 {
+            font-size: 48px;
+        }
 
-	h1 {
-		font-size: 48px;
-	}
+        p{
+            margin: 0 0 50px;
+        }
 
-	p {
-		padding: 15px 0 50px 0;
-		width: 80%;
-	}
-
-	a {
-		border: 1px solid $myC;
-		padding: 13px 25px;
-		text-decoration: none;
-		color: $myC;
-		border-radius: 30px;
-		transition: 0.8s;
-		&:hover {
-			background-color: $myC;
-			color: #fff;
-			border: 0;
-		}
+        a {
+            border: 1px solid $myC;
+            padding: 13px 25px;
+            text-decoration: none;
+            color: $myC;
+            border-radius: 30px;
+            transition: 0.8s;
+            &:hover {
+                background-color: $myC;
+                color: #fff;
+                border: 0;
+            }
+        }
 	}
 }
 #content1,
@@ -125,20 +122,19 @@ nav {
 #icon {
 	max-width: 1000px;
 	background-color: $bgC;
-	margin: 0 auto;
-	// align-items: center;
+    margin: 0 auto;
+    padding: 20px 0;
 	div {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
 		background-color: $bgC;
 		div {
-			display: block;
-			text-align: center;
+            display: block;
+            margin: 0 auto;
 			img {
 				display: block;
 				width: 80px;
 				// background:purple;
-				margin-left: 55px;
 				padding-top: 20px;
 				&:hover {
 					filter: invert(68%) sepia(12%) saturate(1413%) hue-rotate(221deg)
@@ -146,9 +142,8 @@ nav {
 				}
 			}
 			span {
-				display: block;
-				margin-left: 25px;
-				padding: 10px;
+                display: block;
+                text-align: center;
 				&:hover {
 					color: $myC;
 				}
@@ -175,6 +170,7 @@ footer {
 	padding: 20px;
 	cursor: pointer;
 
+	// 點到選單後
 	&:active #menu-box {
 		right: 0;
 	}
@@ -221,34 +217,41 @@ footer {
 	}
 	#menu {
 		display: block;
-    }
-    
-    .content{
-        grid-template-columns: auto;
-        .pic{
-            grid-area: pic;
-            text-align: center;
-        }
-        .tex{
-            grid-area: tex;
-        }
-    }
+	}
+
+	.content {
+		grid-template-columns: auto;
+		.pic {
+			grid-area: pic;
+			text-align: center;
+			width: 600px;
+			margin: 0 auto;
+			padding: 50px 0;
+		}
+		.tex {
+			grid-area: tex;
+			padding: 0 200px;
+			p {
+				padding: 20px 70px 10px;
+			}
+		}
+	}
 
 	#content1,
 	#content2,
 	#content3 {
-        // "" 一列
-        // "" ""兩列
-        grid-template-areas: "tex" "pic";
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    #icon{
-        div{
-            grid-template-columns: repeat(2,1fr);
-        }
-    }
+		// "" 一列
+		// "" ""兩列
+		grid-template-areas: "tex" "pic";
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	#icon {
+		div {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }
 // 平板
 @media screen and (min-width: 769px) {
@@ -260,71 +263,88 @@ footer {
 	}
 	#menu {
 		display: block;
-    }
-    
-    .content{
-        grid-template-columns: auto;
-        .pic{
-            grid-area: pic;
-            text-align: center;
-        }
-        .tex{
-            grid-area: tex;
-        }
-    }
+	}
+
+	.content {
+		grid-template-columns: auto;
+		.pic {
+			grid-area: pic;
+			text-align: center;
+			width: 800px;
+			margin: 0 auto;
+			padding: 50px 0;
+		}
+		.tex {
+			grid-area: tex;
+			padding: 0 200px;
+			p {
+				padding: 20px 70px 10px;
+			}
+		}
+	}
 
 	#content1,
 	#content2,
 	#content3 {
-        // "" 一列
-        // "" ""兩列
-        grid-template-areas: "tex" "pic";
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    #icon{
-        div{
-            grid-template-columns: repeat(4,1fr);
-        }
-    }
+		// "" 一列
+		// "" ""兩列
+		grid-template-areas: "tex" "pic";
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	#icon {
+		div {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
 }
 // 電腦
 @media screen and (min-width: 1025px) {
-    nav {
-		grid-template-columns: repeat(3,auto);
+	nav {
+		grid-template-columns: repeat(3, auto);
 		ul {
 			display: block;
 		}
 	}
 	#menu {
 		display: none;
-    }
-    
-    .content{
-        grid-template-columns: auto auto;
-        .pic{
-            grid-area: pic;
-            // text-align: center;
-        }
-        .tex{
+	}
+
+	.content {
+        grid-template-columns: 1fr 1fr;
+		.pic {
+			grid-area: pic;
+            text-align: left;
+            width: 300px;
+            padding: 0;
+		}
+		.tex {
             grid-area: tex;
-        }
-    }
+            padding: 0 ;
+            p{
+                padding:0;
+            }
+		}
+	}
 
 	#content1,
-	#content2,
 	#content3 {
-        // "" 一列
-        // "" ""兩列
+        grid-template-areas: "pic tex";
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+	}
+
+	#content2 {
         grid-template-areas: "tex pic";
-        grid-template-columns: auto auto;
-        // text-align: center;
-    }
-    
-    #icon{
-        div{
-            grid-template-columns: repeat(6,1fr);
-        }
-    }
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+	}
+
+	#icon {
+		div {
+			grid-template-columns: repeat(6, 1fr);
+		}
+	}
 }
+
