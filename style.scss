@@ -31,7 +31,7 @@ $bgC: #f8f9fa;
 
 	h1 {
 		color: #fff;
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 
@@ -170,6 +170,7 @@ footer {
 	top: 0;
 	right: 0;
 	padding: 20px;
+	z-index: 1;
 	cursor: pointer;
 
 	// 點到選單後
@@ -199,6 +200,7 @@ footer {
 			li {
 				a {
 					text-decoration: none;
+					font-size: 26px;
 				}
 			}
 		}
@@ -217,8 +219,19 @@ footer {
 			display: none;
 		}
 	}
+
+
+	#banner{
+		div{
+			width: 300px;
+		}
+	}
+
 	#menu {
 		display: block;
+		#menu-box{
+			width: 200px;
+		}
 	}
 
 	.content {
@@ -226,15 +239,15 @@ footer {
 		.pic {
 			grid-area: pic;
 			text-align: center;
-			width: 600px;
+			width: 70%;
 			margin: 0 auto;
 			padding: 50px 0;
 		}
 		.tex {
 			grid-area: tex;
-			padding: 0 200px;
+			padding: 10px 20px;
 			p {
-				padding: 20px 70px 10px;
+				padding: 10px 10px;
 			}
 		}
 	}
@@ -263,8 +276,13 @@ footer {
 			display: none;
 		}
 	}
+
+
 	#menu {
 		display: block;
+		#menu-box{
+			width: 400px;
+		}
 	}
 
 	.content {

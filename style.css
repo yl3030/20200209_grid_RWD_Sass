@@ -32,7 +32,7 @@
 
 #banner h1 {
   color: #fff;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 nav {
@@ -196,6 +196,7 @@ footer img {
   top: 0;
   right: 0;
   padding: 20px;
+  z-index: 1;
   cursor: pointer;
 }
 
@@ -232,6 +233,7 @@ footer img {
 
 #menu #menu-box ul li a {
   text-decoration: none;
+  font-size: 26px;
 }
 
 #menu img {
@@ -246,8 +248,14 @@ footer img {
   nav ul {
     display: none;
   }
+  #banner div {
+    width: 300px;
+  }
   #menu {
     display: block;
+  }
+  #menu #menu-box {
+    width: 200px;
   }
   .content {
     -ms-grid-columns: auto;
@@ -258,7 +266,7 @@ footer img {
     -ms-grid-column: 1;
     grid-area: pic;
     text-align: center;
-    width: 600px;
+    width: 70%;
     margin: 0 auto;
     padding: 50px 0;
   }
@@ -266,10 +274,10 @@ footer img {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: tex;
-    padding: 0 200px;
+    padding: 10px 20px;
   }
   .content .tex p {
-    padding: 20px 70px 10px;
+    padding: 10px 10px;
   }
   #content1,
   #content2,
@@ -295,6 +303,9 @@ footer img {
   }
   #menu {
     display: block;
+  }
+  #menu #menu-box {
+    width: 400px;
   }
   .content {
     -ms-grid-columns: auto;
