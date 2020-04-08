@@ -25,13 +25,14 @@
   margin: 0 auto;
 }
 
-#banner h1,
 #banner h2 {
   color: #fff;
+  font-size: 18px;
 }
 
 #banner h1 {
-  font-size: 60px;
+  color: #fff;
+  font-size: 50px;
 }
 
 nav {
@@ -60,7 +61,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: gold;
+  color: #FEBC60;
   text-decoration: none;
   padding: 15px;
 }
@@ -127,7 +128,6 @@ nav img:hover {
 .content .tex a:hover {
   background-color: #a689cd;
   color: #fff;
-  border: 0;
 }
 
 #content1,
